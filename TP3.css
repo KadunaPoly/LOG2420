@@ -1,0 +1,219 @@
+body {
+    font-family: "Arial";
+    color: white;
+}
+
+h1{
+    padding-top: 0;
+    margin-top: 0;
+    background-color: darkgray;
+    text-align: center;
+    color: white;
+}
+
+h2{
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+    font-size: 16px;
+}
+
+#input{
+    display: block;
+    width: 100%;
+    background-color: #C65543;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#input-table{
+    width: 100%;
+    font-size: 14px;
+    border: none ;
+    overflow: auto;
+}
+
+#input-table td{
+    width: 10.1%;
+}
+
+#input-table td *{
+    margin: auto;
+}
+
+#input-table select{
+    display: block;
+    margin: auto;
+    width: 95%;
+    border-radius: 5px;
+}
+
+#alpha{
+    color: black;
+    background-color: #E6EA29;
+}
+
+.row-title{
+    font-weight: bold;
+    background-color: #903A2C;
+    border: white;
+    text-align: center;
+    color: white;
+}
+
+.column-title{
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+    border: none;
+    background-color: #186C85;
+    color: white;
+}
+
+input[type=radio]{
+    display: block;
+    margin: auto;
+}
+
+.panel-container{
+    margin-top: 1.5%;
+    width: 100%;
+}
+
+button{
+    display: block;
+    float: left;
+    border-radius: 0 10px 10px 0;
+    border: none;
+    display: block;
+    background-color: #C65543;
+    width: 5%;
+}
+
+img{
+    width:100%;
+    height: auto;
+}
+
+#table-butn{
+    background-color: darkgray;
+}
+
+.panel{
+    clear: both;
+    float: left;
+    background-color: #C65543;
+    width: 95%;
+    border-radius: 10px 0 10px 10px;
+}
+
+#graph-panel{
+    height: auto;
+}
+
+#graph-menu{
+    width: 15%;
+    float: left;
+    margin:20px;
+    font-size: 12px;
+}
+
+#graph-menu h3{
+    font-size: 16px;
+    margin: 20px 0 5px 0;
+    text-decoration: underline;
+}
+
+#graph-menu p{
+    padding-top: 0;
+    margin: 0.5%;
+}
+
+
+#graph-menu label{
+    display: block;
+    padding-left: 15px;
+    text-indent: -15px;
+}
+
+#graph-menu input {
+    vertical-align: bottom;
+    position: relative;
+    margin: 0.2%;
+}
+
+.graphs{
+    width: 80%;
+    height: 90%;
+    float: right;
+}
+
+#previous{
+    clear: both;
+    float: left;
+}
+
+#next{
+    float: right;
+}
+
+.next-previous{
+    text-decoration: none;
+    padding: 5px 10px;
+    background-color: #903A2C;
+    color: white;
+    border-radius: 5px;
+    margin: 20px;
+}
+
+#table-panel table{
+    margin: 2% 0;
+    width: 100%;
+    border: solid 1px;
+    text-align: center;
+}
+
+
+
+.container{
+    display: inline-block;
+    height: 40%;
+}
+
+
+
+
+
+@media only screen and (max-width: 800px) {
+
+    .panel-global{
+
+    }
+
+    .panel{
+        width: 100%;
+        display: block;
+        margin-top: 2%;
+        border-radius: 10px 10px 10px 10px;
+    }
+
+    .panel-button{
+        display: none;
+    }
+
+    #graph-menu{
+        width: 95%;
+    }
+
+    #graph-menu label{
+        display: inline-block;
+        width: 10%;
+    }
+}
+
+
+
+
+
+
+

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Scénario d'élasticité-prix</title>
+    <link rel="stylesheet" href="TP3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
+</head>
+
+<body>
+
+<header>
+    <h1>Scénario d'élasticité-prix</h1>
+</header>
+
+
+<div id="input">
+    <h2>Inputs</h2>
+    <table id="input-table">
+        <tr>
+            <td></td>
+            <td id="alpha" class="column-title">Alpha</td>
+            <td class="column-title">Beta</td>
+            <td class="column-title">Gamma</td>
+            <td class="column-title">Delta</td>
+            <td class="column-title">Epsilon</td>
+            <td class="column-title">Talaria Mobile</td>
+            <td class="column-title">Iota</td>
+            <td class="column-title">Theta</td>
+            <td class="column-title">Kappa</td>
+        </tr>
+        <tr>
+            <td class="row-title">Outlier Competitor</td>
+            <td></td>
+            <td><input type="radio"></td>
+            <td><input type="radio"></td>
+            <td><input type="radio"></td>
+            <td><input type="radio"></td>
+            <td><input type="radio"></td>
+            <td><input type="radio"></td>
+            <td><input type="radio"></td>
+            <td><input type="radio"></td>
+        </tr>
+        <tr>
+            <td class="row-title">Price Shift</td>
+            <td><select name="">
+                <option value="-40%">-40%</option>
+                <option value="-30%">-30%</option>
+                <option value="-20%">-20%</option>
+                <option value="-10%">-10%</option>
+                <option value="0%">0%</option>
+                <option value="10%">10%</option>
+                <option value="20%">20%</option>
+                <option value="30%">30%</option>
+                <option value="40%">40%</option>
+            </select></td>
+            <td><select name="">
+                <option value="-40%">-40%</option>
+                <option value="-30%">-30%</option>
+                <option value="-20%">-20%</option>
+                <option value="-10%">-10%</option>
+                <option value="0%">0%</option>
+                <option value="10%">10%</option>
+                <option value="20%">20%</option>
+                <option value="30%">30%</option>
+                <option value="40%">40%</option>
+            </select></td>
+            <td><select name="">
+                <option value="-40%">-40%</option>
+                <option value="-30%">-30%</option>
+                <option value="-20%">-20%</option>
+                <option value="-10%">-10%</option>
+                <option value="0%">0%</option>
+                <option value="10%">10%</option>
+                <option value="20%">20%</option>
+                <option value="30%">30%</option>
+                <option value="40%">40%</option>
+            </select></td>
+            <td><select name="">
+                <option value="-40%">-40%</option>
+                <option value="-30%">-30%</option>
+                <option value="-20%">-20%</option>
+                <option value="-10%">-10%</option>
+                <option value="0%">0%</option>
+                <option value="10%">10%</option>
+                <option value="20%">20%</option>
+                <option value="30%">30%</option>
+                <option value="40%">40%</option>
+            </select></td>
+            <td><select name="">
+                <option value="-40%">-40%</option>
+                <option value="-30%">-30%</option>
+                <option value="-20%">-20%</option>
+                <option value="-10%">-10%</option>
+                <option value="0%">0%</option>
+                <option value="10%">10%</option>
+                <option value="20%">20%</option>
+                <option value="30%">30%</option>
+                <option value="40%">40%</option>
+            </select></td>
+            <td><select name="">
+                <option value="-40%">-40%</option>
+                <option value="-30%">-30%</option>
+                <option value="-20%">-20%</option>
+                <option value="-10%">-10%</option>
+                <option value="0%">0%</option>
+                <option value="10%">10%</option>
+                <option value="20%">20%</option>
+                <option value="30%">30%</option>
+                <option value="40%">40%</option>
+            </select></td>
+            <td><select name="">
+                <option value="-40%">-40%</option>
+                <option value="-30%">-30%</option>
+                <option value="-20%">-20%</option>
+                <option value="-10%">-10%</option>
+                <option value="0%">0%</option>
+                <option value="10%">10%</option>
+                <option value="20%">20%</option>
+                <option value="30%">30%</option>
+                <option value="40%">40%</option>
+            </select></td>
+            <td><select name="">
+                <option value="-40%">-40%</option>
+                <option value="-30%">-30%</option>
+                <option value="-20%">-20%</option>
+                <option value="-10%">-10%</option>
+                <option value="0%">0%</option>
+                <option value="10%">10%</option>
+                <option value="20%">20%</option>
+                <option value="30%">30%</option>
+                <option value="40%">40%</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td class="row-title">Unlimited Tariff</td>
+            <td>
+                <label>
+                    <select name="tariff">
+                        <option value="not available">not available</option>
+                        <option value="available 5£">available 5£</option>
+                        <option value="available 10£">available 10£</option>
+                        <option value="available 15£">available 15£</option>
+                    </select>
+                </label>
+            </td>
+            <td>
+                <label>
+                    <select name="tariff">
+                        <option value="not available">not available</option>
+                        <option value="available 5£">available 5£</option>
+                        <option value="available 10£">available 10£</option>
+                        <option value="available 15£">available 15£</option>
+                    </select>
+                </label>
+            </td>
+            <td>
+                <label>
+                    <select name="tariff">
+                        <option value="not available">not available</option>
+                        <option value="available 5£">available 5£</option>
+                        <option value="available 10£">available 10£</option>
+                        <option value="available 15£">available 15£</option>
+                    </select>
+                </label>
+            </td>
+            <td>
+                <label>
+                    <select name="tariff">
+                        <option value="not available">not available</option>
+                        <option value="available 5£">available 5£</option>
+                        <option value="available 10£">available 10£</option>
+                        <option value="available 15£">available 15£</option>
+                    </select>
+                </label>
+            </td>
+            <td>
+                <label>
+                    <select name="tariff">
+                        <option value="not available">not available</option>
+                        <option value="available 5£">available 5£</option>
+                        <option value="available 10£">available 10£</option>
+                        <option value="available 15£">available 15£</option>
+                    </select>
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td class="row-title">Hight Data Tariff</td>
+            <td>
+                <label>
+                    <select name="data-tariff">
+                        <option value="none">none</option>
+                        <option value="100G">100G</option>
+                    </select>
+                </label>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div class="panel-container">
+
+    <div id="graph-panel" class="panel">
+        <h2>Output</h2>
+        <div id="graph-menu">
+
+            <h3>Charts</h3>
+            <label><input type="checkbox" placeholder="Volume">Volume </label>
+            <label><input type="checkbox" placeholder="ARPU">ARPU</label>
+            <label><input type="checkbox" placeholder="Revenue">Revenue</label>
+            <label><input type="checkbox" placeholder="ACVL">ACVL</label>
+            <label><input type="checkbox" placeholder="Value">Value</label>
+            <label><input type="checkbox" placeholder="ACVL Ratio">ACVL Ratio</label>
+
+            <h3>Baseline</h3>
+            <p>Customer base : 11,456,000</p>
+            <p>Net gains from competitors: 74,890</p>
+
+            <h3>Senario</h3>
+            <p>Customers base: 11,456,000</p>
+            <p>Net gains from competitors: 74,890</p>
+
+        </div>
+
+        <div class="graphs">
+
+                <div class="container">
+                    <canvas id="graph-volume"></canvas>
+                </div>
+               <div class="container">
+                   <canvas id="graph-ARPU"></canvas>
+               </div>
+                <div class="container">
+                    <canvas id="graph-revenue" ></canvas>
+                </div>
+                <div class="container">
+                    <canvas id="graph-ACVL"></canvas>
+                </div>
+                <div class="container">
+                    <canvas id="graph-value"></canvas>
+                </div>
+                <div class="container">
+                    <canvas id="graph-ACVL-ratio"></canvas>
+                </div>
+
+        </div>
+
+
+        <a href="#" id="previous" class="next-previous">Previous</a>
+        <a href="#" id="next" class="next-previous">Next</a>
+    </div>
+
+    <div id="table-panel" class="panel">
+        <h2>Output</h2>
+        <table id="output-table">
+            <tr>
+                <th colspan="2"></th>
+                <th colspan="4">Recontract</th>
+                <th colspan="4">New Custommers</th>
+            </tr>
+            <tr>
+                <th colspan="2"></th>
+                <th colspan="2">Baseline</th>
+                <th colspan="2">Senario</th>
+                <th colspan="2">Baseline</th>
+                <th colspan="2">Senario</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Population</td>
+                <td>Volume</td>
+                <td>ARPU</td>
+                <td>Volume</td>
+                <td>ARPU</td>
+                <td>Volume</td>
+                <td>ARPU</td>
+                <td>Volume</td>
+                <td>ARPU</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="buttons">
+        <button id="graph-butn" class="panel-button"><img src="img/graph_icon.png" alt="graph_incon"></button>
+        <button id="table-butn" class="panel-button"><img src="img/table_icon.png" alt="table_icon"></button>
+    </div>
+
+</div>
+
+
+<footer>
+    <p></p>
+</footer>
+
+<script src="TP3.js"></script>
+<script src="gaph.js"></script>
+
+</body>
+</html>
