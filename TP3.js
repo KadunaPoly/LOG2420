@@ -4,13 +4,16 @@ mediaQuery(x); // Call listener function at run time
 x.addListener(mediaQuery);// Attach listener function on state changes
 
 $(document).ready(function () {
+    console.log("ready");
     $("input[type=radio]").prop('checked', false);
     $("#table-panel").hide();
-});
 
-$("input[type=radio]").click(function () {
+    $("input[type=radio]").click(function () {
     $("input[type=radio]").prop('checked', false);
     $(this).prop('checked', true);
+    })
+
+    createTable();
 });
 
 $(".panel-button").click(function () {
@@ -72,12 +75,19 @@ resize = function () {
 };
 
 
-$("#input").change(function () {
+$("#input").change(function () {    
+    createTable();
+});
+
+function createTable(){
+    console.log("ok");
     $(".output-row").remove();
     fetch("http://localhost:8080/JSON/output2.json").then(function (response) {
-        console.debug(response);
+        console.log(response);
         if (response.ok) {
             response.json().then(function (data) {
+
+                var table = document.createElement("tr");
                 //On récupère ensuite les éléments de notre fichier JSON en le parcourant tel un tableau
                 for (let i in data) {
                     //console.debug(data[i]);
@@ -91,7 +101,7 @@ $("#input").change(function () {
                     table.appendChild(blankRow);
                     //On ajuste le titre de chaque grande partie du tableau
                     let section = document.createElement("tr");
-                    let cellSection = document.createElement("td");
+                    let cellSection = document.createElement("th");
                     if (i === "consumer.segment") {
                         cellSection.appendChild(document.createTextNode("Consumer Segment"));
                     } else {
@@ -111,16 +121,42 @@ $("#input").change(function () {
                             let text = document.createTextNode(data[i][j][k]);
                             //On ajoute la donnée dans notre cellule
                             cell.appendChild(text);
+                            //console.log(cell);
                             //Puis on ajoute notre cellule dans la ligne
                             row.appendChild(cell);
+                            //console.log(row);
                         }
                         //Enfin on ajoute la nouvelle ligne à notre tableau
                         table.appendChild(row)
                     }
                 }
+                
+                $("#output-table").append(table);
+
             })
+
         } else {
             console.error("ERROR: impossible de trouver le fichier JSON!")
         }
     });
-});
+}
+
+
+function updateGraphs()
+{
+    fetch("http://localhost:8080/JSON/output2.json").then(function (response) {
+        console.log(response);
+        if (response.ok) {
+            response.json().then(function (data) {
+
+            
+
+            })
+
+        } else {
+            console.error("ERROR: impossible de trouver le fichier JSON!")
+        }
+    });
+}
+
+
