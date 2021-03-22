@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: rgb(101, 101, 99);
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+    padding: 20px
+}
+
+nav {
+    float: left;
+    width: 16%;
+    background-color: rgb(204, 204, 202);
+    height: 300px;
+}
+
+/* Pour enlever les points de la liste*/
+nav ul {
+    list-style-type: none;
+}
+
+footer {
+    background-color: rgb(119, 119, 117);
+    padding: 10px;
+    position: absolute;
+    bottom: 0%;
+    width: 100%
+}
+
+.input-col1, .input-col2, .input-col3 {
+  float: left;
+  width: 28%;
+  padding: 10px;
+}
+
+#inputs {
+  width:auto;
+}
+
+.input-field {
+  border: 2px solid black;
+  margin-top: 10px;
+  padding: 0px;
+}
+/*
+.company {
+    /*background-color: black; A quoi ca sert?
+}
+*/
+/* Style commun a tous les boites*/
+.alpha, .beta, .epsilon, .gamma, .iota, .kappa, .mobile, .theta {
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    height: auto;
+}
+
+.alpha {background-color: rgb(145, 32, 10); }
+.beta {background-color : rgb(234, 126, 58);}
+.gamma {background-color : rgb(254, 192, 49);}
+.epsilon {background-color : rgb(13, 176, 234);}
+.mobile {background-color : rgb(0, 32, 92);}
+.iota {background-color : rgb(109, 50, 154);}
+.theta {background-color :rgb(251, 55, 197);}
+.kappa {background-color :  rgb(0, 0, 0);}
+
+@media (max-width: 600px) {
+  nav {
+    width: 100%;
+    height: auto;
+  }
+  nav ul li {
+    float: left;
+    padding: 5px;
+  }
+
+  header {
+    font-size: 20px;
+  }
+}
+
+img{
+  width: 84%;
+}
+
+/*Style des selecteurs*/
+.selectCss{
+    text-align: center;
+    background-color: rgb(222, 223, 218);
+    font-size: 20px;
+    color: black;
+    width: 100%;
+    border: none
+}
+
+/* STYLE DES TABLEAUX DANS OUTPUT */
+table {
+  width: 84%
+}
+
+th, td{
+  width: 10%;
+}
+
+td{
+  text-align: center;
+}
+
+.titreTableau{
+  width: 100%;
+  margin-left: 16%;
+  padding-left: 16%;
+  padding-bottom: 10px;
+  font-weight: bold;
+  text-align: center; 
+  position: relative;
+}
+
+.intertitre{
+  width: 100%;
+  margin-left:16%; 
+  padding-bottom: 10px;
+  text-align: center;
+}

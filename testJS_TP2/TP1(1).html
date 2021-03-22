@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel = "stylesheet" type ="text/css" href = "TP1.css"> <!--fichier CSS-->
+    <!-- <script type="text/javascript" src="relative/path/to/your/javascript.js"> </script>-->
+    <title>Scénario d'élasticité prix</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+
+    <header>
+    <h2>Scénarios d'élasticité-prix</h2>
+    </header>
+
+    <nav>
+    <ul>
+        <li><a href="#" onclick="panel(this, 'inputs','output')" style="font-weight: bold;">Inputs</a></li>
+        <li><a href="#" onclick="panel(this, 'output','inputs')">Output</a></li>
+    </ul>
+    </nav>
+
+    <div id="inputs">
+        <!--Colone 1-->
+    <div class="input-col1">
+        <!-- Alpha -->
+        <div class="input-field">
+        <div class= "alpha">
+                Price Shift Alpha
+        </div>
+            <select id = "selector" class = "selectCss" >
+                <option value="0">0%</option>
+                <option value="1">25%</option>
+                <option value="2">50%</option>
+                <option value="3">75%</option>
+                <option value="4">100%</option>
+            </select>
+        </div>
+        <!-- Beta -->
+        <div class="input-field">
+            <div class= "beta">
+                Price Shift Beta
+            </div>
+            <select class = "selectCss" >
+                <option value="0">0%</option>
+                <option value="1">25%</option>
+                <option value="2">50%</option>
+                <option value="3">75%</option>
+                <option value="4">100%</option>
+            </select>
+        </div>
+        <!-- Gamma -->
+        <div class="input-field">
+            <div class= "gamma">
+                Price Shift Gamma
+            </div>
+            <select class = "selectCss" >
+                <option value="0">0%</option>
+                <option value="1">25%</option>
+                <option value="2">50%</option>
+                <option value="3">75%</option>
+                <option value="4">100%</option>
+            </select>
+        </div>
+        <!-- Epsilon -->
+        <div class="input-field">
+            <div class= "epsilon">
+                Price Shift Epsilon
+            </div>
+            <select class = "selectCss" >
+                <option value="0">0%</option>
+                <option value="1">25%</option>
+                <option value="2">50%</option>
+                <option value="3">75%</option>
+                <option value="4">100%</option>
+            </select>
+        </div>
+        <!-- Mobile -->
+        <div class="input-field">
+            <div class= "mobile">
+                Price Shift Mobile
+            </div>
+            <select class = "selectCss" >
+                <option value="0">0%</option>
+                <option value="1">25%</option>
+                <option value="2">50%</option>
+                <option value="3">75%</option>
+                <option value="4">100%</option>
+            </select>
+        </div>
+        <!-- lota -->
+        <div class="input-field">
+            <div class= "iota">
+                Price Shift Iota
+            </div>
+            <select class = "selectCss" >
+                <option value="0">0%</option>
+                <option value="1">25%</option>
+                <option value="2">50%</option>
+                <option value="3">75%</option>
+                <option value="4">100%</option>
+            </select>
+        </div>
+        <!-- Theta -->
+        <div class="input-field">
+            <div class= "theta">
+                Price Shift Theta
+            </div>
+            <select class = "selectCss" >
+                <option value="0">0%</option>
+                <option value="1">25%</option>
+                <option value="2">50%</option>
+                <option value="3">75%</option>
+                <option value="4">100%</option>
+            </select>
+        </div>
+        <!-- Kappa -->
+        <div class="input-field">
+            <div class= "kappa">
+                Price Shift Kappa
+            </div>
+            <select class = "selectCss" >
+                <option value="0">0%</option>
+                <option value="1">25%</option>
+                <option value="2">50%</option>
+                <option value="3">75%</option>
+                <option value="4">100%</option>
+            </select>
+        </div>
+    </div>
+
+        <!-- Colonne 2 -->
+        <div class = "input-col2">
+            <div class="input-field">
+                <div class= "alpha">
+                    High Data Tariff (Alpha only)
+                </div>
+                <select class = "selectCss" >
+                    <option value="0">10GB</option>
+                    <option value="1">20GB</option>
+                </select>
+            </div>
+
+        </div>
+
+        <!-- Colonne 3 -->
+        <div class = "input-col3">
+            <!-- Alpha -->
+            <div class="input-field">
+                <div class= "alpha">
+                    Unlimited Tariff Alpha
+                </div>
+                <select class = "selectCss" >
+                    <option value="0">not available</option>
+                </select>
+            </div>
+            <!-- Beta -->
+            <div class="input-field">
+                    <div class= "beta">
+                        Unlimited Tariff Beta
+                    </div>
+                    <select class = "selectCss" >
+                        <option value="0">not available</option>
+                    </select>
+            </div>
+            <!-- Gamma -->
+            <div class="input-field">
+                <div class= "gamma">
+                    Unlimited Tariff Gamma
+                </div>
+                <select class = "selectCss" >
+                    <option value="0">not available</option>
+                </select>
+            </div>
+            <!-- Epsilon -->
+            <div class="input-field">
+                <div class= "epsilon">
+                    Unlimited Tariff Epsilon
+                </div>
+                <select class = "selectCss" >
+                    <option value="0">not available</option>
+                </select>
+            </div>
+            <!-- Mobile -->
+            <div class="input-field">
+                <div class= "mobile">
+                    Unlimited Tariff Mobile
+                </div>
+                <select class = "selectCss" >
+                    <option value="0">not available</option>
+                </select>
+            </div>
+            <!-- lota -->
+            <div class="input-field">
+                <div class= "iota">
+                    Unlimited Tariff Iota
+                </div>
+                <select class = "selectCss" >
+                    <option value="0">not available</option>
+                </select>
+            </div>
+            <!-- Theta -->
+            <div class="input-field">
+                <div class= "theta">
+                    Unlimited Tariff Theta
+                </div>
+                <select class = "selectCss" >
+                    <option value="0">not available</option>
+                </select>
+            </div>
+            <!-- Kappa -->
+            <div class="input-field">
+                <div class= "kappa">
+                    Unlimited Tariff Kappa
+                </div>
+                <select class = "selectCss" >
+                    <option value="0">not available</option>
+                </select>
+            </div>    
+        </div>
+    </div>
+
+    <div id="output" style= "display: none">
+        <div id = "tableHead">
+        </div>
+        <div id = "tableau1">
+        </div>
+        <div id = "tableau2">
+        </div>
+    </div>
+    <section>
+
+    </section>
+    <script> 
+            /* importation du header
+            var header = document.querySelector('header');
+            var section = document.querySelector('section');  
+
+            charger l'URL du fichier JSON que nous voulons récupérer dans une variable
+            var requestURL = 'http://localhost:8080/JSON/output.json';
+           
+            reduete xMLhttp
+            var request = new XMLHttpRequest();
+
+            ouvrir une nouvelle requête
+            request.open('GET', requestURL);
+
+           preciser que le fichierr attendu est du JSON
+            request.responseType = 'json';
+            request.send();
+           
+            request.onload = function() {
+                var testRequest = request.response;
+                showHeader(testRequest);
+                showTable(testRequest);
+            }
+           */
+            var header = document.querySelector('header');
+            fetch('http://localhost:8080/JSON/output.json').then(function(response) {
+                if (reponse.ok){
+                    return response.blob().then(function(myBlob) 
+                    {
+                        var objectURL = URL.createObjectURL(myBlob);
+                        header.src = objectURL;
+                    });
+                } else { console.log('Mauvaise réponse du réseau');}
+            })
+            .catch(function(error) {
+             console.log('Il y a eu un problème avec l\'opération fetch: ' + error.message);
+            });
+
+            /* Script pour changer la page d'input a output et vice versa */
+            panel = function(el, show, hide) 
+            {
+                document.getElementById(hide).style.display= 'none';
+                document.getElementById(show).style.display = 'block';
+                el.style.fontWeight = 'bold'
+                /* manque le changement pour le bold*/
+        
+                
+                if (!afficherImage)
+                {
+                    var donneesJson = fetchLesDonnees();
+                    document.getElementById('tableHead').innerHTML = '<div class = "titreTableau"><table><th> RECONTRACT</th><th style="padding-right: 5%"> NEW CUSTOMERS</th></table></div><div class= intertitre><table><th></th><th> Baseline</th><th> Scenario</th><th> Baseline</th><th> Scenario</th></table></div>';
+                    document.getElementById('tableau1').innerHTML = jsonToTable(defaultData, '' );
+                    document.getElementById('tableau2').innerHTML = jsonToTable(defaultData2, '' );
+                }
+            } 
+               
+            function showHeader(jsonObj) {
+                var myH1 = document.createElement('h1');
+                myH1.textContent = 'title 1';
+                header.appendChild(myH1);
+                var myPara = document.createElement('p');
+                myPara.textContent = 'test1: ';
+                header.appendChild(myPara);
+            } 
+
+            // crée et affiche les fiches de nos customers
+            function showTable(jsonObj) {
+                var tableConsum = jsonObj['consumer.segment'];
+                for (var i = 0; i < tableConsum.length; i++) {
+                    var myArticle = document.createElement('article');//Consumer.Segment
+                    var myPara1 = document.createElement('p');//population
+                    var myPara2 = document.createElement('p');//Volume.Baseline.Recontract
+                    var myPara3 = document.createElement('p');//ARPU.Baseline.Recontract
+                    var myPara4 = document.createElement('p');//Volume.Scenario.Recontract
+                    var myPara5 = document.createElement('p');//ARPU.Scenario.Recontract
+                    var myPara6 = document.createElement('p');//Volume.Baseline.NewCustomers
+                    var myPara7 = document.createElement('p');//ARPU.Baseline.NewCustomers
+                    var myPara8 = document.createElement('p');//Volume.Scenario.NewCustomers
+                    var myPara9 = document.createElement('p');//ARPU.Scenario.NewCustomers
+        
+        
+                    myPara1.textContent = tableConsum[i].Consumer.Segment;
+                    myPara2.textContent =  tableConsum[i].Population;
+                    /*myPara3.textContent = ;
+                    myPara3.textContent = ;
+                    myPara3.textContent = ;
+                    myPara3.textContent = ;
+                    myPara3.textContent = ;
+                    myPara3.textContent = ;
+                    myPara3.textContent = ;
+                    
+                    for (var i =0 ;i < 8; i++){
+                        myArticle.appendChild(myPara[i]);
+                        }*/
+                    myArticle.appendChild(myPara1);
+                    myArticle.appendChild(myPara2);
+                    section.appendChild(myArticle);
+                }/*
+                var tableEstim = jsonObj['estimated.usage'];
+                for (var i = 0; i < tableEstim.length; i++) {
+                    var myArticle = document.createElement('article');//Estimated.mobile.data.usage
+                    var myPara1 = document.createElement('p');//population
+                    var myPara2 = document.createElement('p');//Volume.Baseline.Recontract
+                    var myPara3 = document.createElement('p');//ARPU.Baseline.Recontract
+                    var myPara4 = document.createElement('p');//Volume.Scenario.Recontract
+                    var myPara5 = document.createElement('p');//ARPU.Scenario.Recontract
+                    var myPara6 = document.createElement('p');//Volume.Baseline.NewCustomers
+                    var myPara7 = document.createElement('p');//ARPU.Baseline.NewCustomers
+                    var myPara8 = document.createElement('p');//Volume.Scenario.NewCustomers
+                    var myPara9 = document.createElement('p');//ARPU.Scenario.NewCustomers
+        
+        
+                    myH2.textContent = table[i].name;
+                    myPara1.textContent = 'Secret identity: ' + table[i].secretIdentity;
+                    myPara2.textContent = 'Age: ' + table[i].age;
+                    myPara3.textContent = 'Superpowers:';
+                        
+                    var superPowers = table[i].powers;
+                    for (var j = 0; j < superPowers.length; j++) {
+                    var listItem = document.createElement('li');
+                    listItem.textContent = superPowers[j];
+                    myList.appendChild(listItem);
+                    }*/
+        
+            }
+        
+        </script>
+
+    <footer>
+    </footer>
+</body>
+
+</html>

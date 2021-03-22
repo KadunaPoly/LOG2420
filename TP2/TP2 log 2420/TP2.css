@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  background-color:rgb(102, 102, 102);
+  padding:30px;
+  text-align: center;
+  font-size:35px;
+  color:white;
+}
+
+nav {
+  height:300px ;
+  width:15%;
+  float: left;
+  background: #ccc;
+  padding: 20px;
+  margin-bottom: 20%;
+}
+
+nav ul {
+  list-style-type: none;
+  text-align: left;
+  padding:0;
+  height: 40%;
+}
+
+footer {
+  background-color: #777;
+  padding: 10px;
+  width:100%;
+  float: right;
+}
+.input-col1, .input-col2, .input-col3 {
+  float: left;
+  text-align: center;
+  width: 28%;
+  height: 50%;
+  padding: 10px;
+}
+#inputs {
+  width:auto;
+}
+
+.input-field {
+  border: 2px solid black;
+  margin-top: 10px;
+  padding: 0px;
+}
+
+.company {
+}/*TO DO*/
+
+/* Style commun a tous les boites*/
+.alpha, .beta, .epsilon, .gamma,.delta,.iota, .kappa, .mobile, .theta {
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  height: auto;
+}
+.alpha {background-color:rgb(241, 7, 38)}
+.beta {background-color : rgb(230, 120, 50);}
+.gamma {background-color : rgb(250, 190, 40);}
+.delta{background-color:rgb(44, 161, 44);}
+.epsilon {background-color : rgb(16, 170, 230);}
+.mobile {background-color:rgb(21, 10, 230)}
+.iota {background-color : rgb(100, 55, 150);}
+.theta {background-color :rgb(249, 50, 200);}
+.kappa {background-color :  rgb(0, 0, 0);}
+
+@media (max-width: 600px) {
+  nav {
+    width: 100%;
+    height: auto;
+    list-style-type: none;
+    padding: 0;
+    margin:0;
+  }
+  nav ul li {
+    list-style-type: none;
+    text-align: left;
+    display:inline;
+  }
+  header {
+    font-size: 20px;
+  }
+}
+.selectList{ 
+  text-align: center;
+  background-color: white;
+  font-size: 20px;
+  color: black;
+  width: 100%;
+  border: none
+}

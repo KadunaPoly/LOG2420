@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Scénario d'élasticité prix</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel = "stylesheet" type ="text/css" href = "TP2.css">
+<script type="text/javascript" src="TP2.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" ></script>
+<script type="text/javascript" src="output.json"></script>
+
+</head>
+<body>
+
+<header>
+  <h2>Scénarios d'élasticité-prix</h2>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#" onclick="panel(this, 'inputs','output')" style="font-weight: bold;">Inputs</a></li>
+    <li><a href="#" onclick="panel(this, 'output','inputs')">Output</a></li>
+  </ul>
+</nav>
+
+<div id="inputs">
+  <div class="input-col1">
+     <div class="input-field">
+      <!-- Alpha -->
+      <div class="alpha">
+          Pricce Shift Alpha.
+      </div>
+        <select class = "selectList" onchange="document.getElementById('image').src = this.value">
+            <option value="fig3.png">0%</option>
+            <option value="fig4.png">-40%</option>
+            <option value="fig4.png">-30%</option>
+            <option value="fig4.png">-20%</option>
+            <option value="fig4.png">-10%</option>
+            <option value="fig4.png">10%</option>
+            <option value="fig4.png">20%</option>
+            <option value="fig4.png">30%</option>
+            <option value="fig4.png">40%</option>
+        </select> 
+    </div>
+      <!-- Beta -->
+    <div class="input-field">
+        <div class= "beta">
+            Price Shift Beta
+        </div>
+        <select class = "selectList">
+            <option value="0%">0%</option>
+            <option value="-40%">-40%</option>
+            <option value="-30%">-30%</option>
+            <option value="-20%">-20%</option>
+            <option value="-10%">-10%</option>
+        </select>
+    </div>
+    
+      <!-- gamma -->
+    <div class="input-field">
+        <div class= "gamma">
+            Price Shift Gamma
+        </div>
+        <select class = "selectList">
+            <option value="0%">0%</option>
+            <option value="-40%">-40%</option>
+            <option value="-30%">-30%</option>
+            <option value="-20%">-20%</option>
+            <option value="-10%">-10%</option>
+        </select>
+    </div>
+
+    <div class="input-field">
+        <div class= "delta">
+            Price Shift Delta
+        </div>
+        <select class = "selectList">
+            <option value="0%">0%</option>
+            <option value="-40%">-40%</option>
+            <option value="-30%">-30%</option>
+            <option value="-20%">-20%</option>
+            <option value="-10%">-10%</option>
+        </select>
+    </div>
+
+      <!-- epsilon -->
+    <div class="input-field">
+        <div class= "epsilon">
+            Price Shift Epsilon
+        </div>
+        <select class = "selectList">
+            <option value="0%">0%</option>
+            <option value="-40%">-40%</option>
+            <option value="-30%">-30%</option>
+            <option value="-20%">-20%</option>
+            <option value="-10%">-10%</option>
+        </select>
+    </div>
+      <!-- mobile -->
+    <div class="input-field">
+        <div class= "mobile">
+            Price Shift Talaria Mobile
+        </div>
+        <select class = "selectList">
+            <option value="0%">0%</option>
+            <option value="-40%">-40%</option>
+            <option value="-30%">-30%</option>
+            <option value="-20%">-20%</option>
+            <option value="-10%">-10%</option>
+        </select>
+    </div>
+      <!-- iota -->
+    <div class="input-field">
+        <div class= "iota">
+            Price Shift Iota
+        </div>
+        <select class = "selectList">
+            <option value="0%">0%</option>
+            <option value="-40%">-40%</option>
+            <option value="-30%">-30%</option>
+            <option value="-20%">-20%</option>
+            <option value="-10%">-10%</option>
+        </select>
+    </div>
+
+      <!-- theta -->
+    <div class="input-field">
+        <div class= "theta">
+            Price Shift Theta
+        </div>
+        <select class = "selectList">
+            <option value="0%">0%</option>
+            <option value="-40%">-40%</option>
+            <option value="-30%">-30%</option>
+            <option value="-20%">-20%</option>
+            <option value="-10%">-10%</option>
+        </select>
+    </div>
+
+      <!-- kappa -->
+    <div class="input-field">
+        <div class= "kappa">
+            Price Shift Kappa
+        </div>
+        <select class = "selectList">
+            <option value="0%">0%</option>
+            <option value="-40%">-40%</option>
+            <option value="-30%">-30%</option>
+            <option value="-20%">-20%</option>
+            <option value="-10%">-10%</option>
+        </select>
+  </div>
+
+ </div>
+
+  <div class="input-col2">
+    <div class="input-field">
+        <div class= "alpha">
+            High Data Tariff (Alpha only)
+        </div>
+        <select class = "selectList">
+            <option value="none">none</option>
+            <option value="100GB">100GB</option>
+        </select>
+        <!-- À compléter.  Chaque compagnie doit être représentée par un DIV. -->
+    </div>
+  </div>
+
+  <div class="input-col3">
+      <div class="input-field">
+          <div class= "alpha">
+              Unlimited Tariff Alpha
+          </div>
+          <select class = "selectList">
+              <option value="0">not available</option>
+              <option value="5">available at 5£</option>
+              <option value="10">available at 10£</option>
+              <option value="15">available at 15£</option>
+          </select>
+      </div>
+      
+      <div class="input-field">
+          <div class= "beta">
+              Unlimited Tariff Beta
+          </div>
+          <select class = "selectList">
+              <option value="5">available at 5£</option>
+              <option value="10">available at 10£</option>
+          </select>
+      </div>
+
+      <div class="input-field">
+          <div class= "gamma">
+              Unlimited Tariff Gamma
+          </div>
+          <select class = "selectList">
+              <option value="5">available at 5£</option>
+              <option value="10">available at 10£</option>
+          </select>
+      </div>
+
+      <div class="input-field">
+          <div class= "delta">
+              Unlimited Tariff Delta
+          </div>
+          <select class = "selectList">
+              <option value="0">not available</option>
+              <option value="5">available at 5£</option>
+              <option value="10">available at 10£</option>
+          </select>
+      </div>
+
+      <div class="input-field">
+          <div class= "epsilon">
+              Unlimited Tariff Epsilon
+          </div>
+          <select class = "selectList">
+              <option value="0">not available</option>
+              <option value="5">available at 5£</option>
+              <option value="10">available at 10£</option>
+          </select>
+      </div>
+
+      <div class="input-field">
+          <div class= "mobile">
+              Unlimited Tariff Talaria Mobile
+          </div>
+          <select class = "selectList">
+              <option value="0">not available</option>
+          </select>
+      </div>
+
+      <div class="input-field">
+          <div class= "iota">
+              Unlimited Tariff Iota
+          </div>
+          <select class = "selectList">
+              <option value="0">not available</option>
+          </select>
+      </div>
+
+      <div class="input-field">
+          <div class= "theta">
+              Unlimited Tariff Theta
+          </div>
+          <select class = "selectList">
+              <option value="0">not available</option>
+          </select>
+      </div>
+
+      <div class="input-field">
+          <div class= "kappa">
+              Unlimited Tariff Kappa
+          </div>
+          <select class = "selectList">
+              <option value="0">not available</option>
+          </select>
+      </div>
+    </div>
+</div>
+<div id="output">
+    <img id="image"/>
+</div>
+
+<footer>
+</footer>
+
+</body>
+
+</html>
